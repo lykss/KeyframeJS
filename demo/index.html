@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>KeyframeJS DEMO</title>
+		
+		<!--You can import some css files or inline style-->
+		
+		<link rel="stylesheet" type="text/css" href="external1.css"/>
+		<link rel="stylesheet" type="text/css" href="external2.css"/>
+		
+		<style>
+			.rule7 {
+				height: 700px;
+				width: 700px;
+			}
+			
+			@-webkit-keyframes demo3{
+				0% {
+					height: 0px;
+					width: 0px;
+				}
+				100% {
+					height: 700px;
+					width: 700px;
+				}
+			}
+			
+			@keyframes demo3{
+				0% {
+					height: 0px;
+					width: 0px;
+				}
+				100% {
+					height: 700px;
+					width: 700px;
+				}
+			}
+		</style>
+		
+		<style>
+			.demo {
+				height: 100px;
+				width: 100px;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-name: demo-animation;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-name: demo-animation;
+			}
+			
+			@-webkit-keyframes demo-animation{
+				0% {
+					height: 100px;
+					width: 100px;
+					background-color: #000;
+				}
+				100% {
+					height: 200px;
+					width: 200px;
+					background-color: #fff;
+				}
+			}
+			
+			@keyframes demo-animation{
+				0% {
+					height: 100px;
+					width: 100px;
+					background-color: #000;
+				}
+				100% {
+					height: 200px;
+					width: 200px;
+					background-color: #fff;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo" class=""></div>
+		
+		<script type="text/javascript" src="../src/Keyframe.js" ></script>
+		<script>
+			var demo1Keyframe = Keyframe.findKeyframe("demo-animation");
+			
+			Keyframe.addKeyframe(demo1Keyframe, "20% {background-color: #0f0;}");
+			Keyframe.addKeyframe(demo1Keyframe, "40% {background-color: #f00;}");
+			Keyframe.addKeyframe(demo1Keyframe, "60% {background-color: #00f;}");
+			Keyframe.addKeyframe(demo1Keyframe, "80% {height: 400px;}");
+			
+			Keyframe.deleteKeyframe(demo1Keyframe, "80%");
+			
+			setTimeout(function() {
+				document.getElementById("demo").className = "demo";
+			}, 2000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+.rule1 {
+	height: 100px;
+	width: 100px;
+}
+
+.rule2 {
+	height: 200px;
+	width: 200px;
+}
+
+.rule3 {
+	height: 300px;
+	width: 300px;
+}
+
+@-webkit-keyframes demo1{
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+	
+	100% {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+@keyframes demo1{
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+	
+	100% {
+		height: 100px;
+		width: 100px;
+	}
+}

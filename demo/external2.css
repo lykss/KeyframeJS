@@ -1,0 +1,25 @@
+.rule4 {
+	height: 400px;
+	width: 400px;
+}
+
+.rule5 {
+	height: 500px;
+	width: 500px;
+}
+
+.rule6 {
+	height: 600px;
+	width: 600px;
+}
+
+@-webkit-keyframes demo2{
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+	100% {
+		height: 400px;
+		width: 400px;
+	}
+}
